@@ -1,0 +1,44 @@
+#include <iostream>
+#include<stdio.h>
+
+using namespace std;
+struct rectangle 
+{
+    int length;
+    int breadth;
+};
+
+struct card
+{
+    int face;
+    int shape;
+    int color;
+};
+
+struct student
+{
+    char division;
+    int rollNo;
+    int age;
+};
+
+int main()
+{
+    struct rectangle r;
+    r.length=10;
+    r.breadth=5;
+    
+    struct rectangle r1={10,5};
+    rectangle r2={10,5};
+    
+    cout<<r.length<<endl<<r1.length<<endl<<r2.length<<endl;
+    
+    card c={1,0,0};
+    cout<<c.face<<endl<<c.shape<<endl<<c.color<<endl;
+    
+    student s={'a',10,17};
+    cout<<"sizeof char in stu  "<<sizeof(s.division)<<endl;//used only 1 space but by alloted as 4 called as padding(close to nearst grater multiple of 4)    cout<<"sizeof int  in stu  "<<sizeof(s.rollNo)<<endl;
+    cout<<"sizeof int in stu  "<<sizeof(s.age)<<endl;
+    cout<<"sizeof stu  "<<sizeof(s)<<endl;
+    return 0;
+}
